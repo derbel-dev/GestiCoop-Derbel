@@ -62,17 +62,28 @@
 
         </Border>
 
-        <StackPanel Grid.Column="1" HorizontalAlignment="Center">
-            <TextBlock Text="Connexion" FontSize="20" />
-
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Étudiant" Margin="0,0,10,0" />
-                <TextBlock Text="Entreprise" />
-                <TextBlock Text="Coordonateur" />
+        <Border Grid.Column="1" 
+                Padding="40,0"
+                Background="FloralWhite">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock  Text="Connexion" FontSize="25" 
+                            FontWeight="Bold" 
+                            HorizontalAlignment="Center"
+                            Margin="0,0,0,10"
+                            Foreground="#191970" />
+                <!--Choix du profile-->
+                <StackPanel Orientation="Horizontal" >
+                    <RadioButton Content="Étudiant" Margin="0,0,10,0" />
+                    <RadioButton Content="Entreprise" Margin="0,0,10,0"  />
+                    <RadioButton Content="Coordonateur"/>
+                </StackPanel>
+                <TextBlock Text="Matricule" />
+                <TextBox Margin="0,0,0,10" />
+                <TextBlock Text="Mot de passe" />
+                <PasswordBox  Margin="0,0,0,10" />
+                <Button Content="Se connecter"  Margin="0,0,0,10" />
+                <Button Content="Connexion SSO La Cité" />
             </StackPanel>
-
-        </StackPanel>
-
-
+        </Border>
     </Grid>
 </Window>
