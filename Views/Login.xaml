@@ -1,0 +1,78 @@
+﻿<Window x:Class="GestiCoop.Views.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestiCoop.Views"
+        mc:Ignorable="d"
+        Title="Login" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition  Width="380"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Background="#1F4E79">
+            <StackPanel 
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="40,0"
+                >
+                <TextBlock Text="GestiCoop" FontSize="35" 
+                           Foreground="White"  
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"
+                           />
+                <TextBlock Text="Gérerz vos stages coopératifs" 
+                           FontSize="15" 
+                           HorizontalAlignment="Center"
+                           Foreground="FloralWhite" 
+                           Margin="0,25,0,0"
+                           />
+                <!--Zone des statistiques -->
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,50,0,0"
+                            HorizontalAlignment="Center">
+                    <!--nombre d'étudiants -->
+                    <StackPanel HorizontalAlignment="Center" Margin="0,0,25,0">
+                        <TextBlock Text="248" FontSize="25"
+                                   Foreground="White" 
+                                   FontWeight="Bold" />
+                        <TextBlock Text="étudiant.e.s" Foreground="FloralWhite" />
+                    </StackPanel>
+                    <!--nombre d'offres -->
+                    <StackPanel HorizontalAlignment="Center" Margin="0,0,25,0">
+                        <TextBlock Text="87" FontSize="25"
+                                     Foreground="White" 
+                                     FontWeight="Bold" />
+                        <TextBlock Text="offres de stage" Foreground="FloralWhite" />
+                    </StackPanel>
+                    <!--nombre d'étudiants -->
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Text="348" FontSize="25"
+                                     Foreground="White" 
+                                     FontWeight="Bold" />
+                        <TextBlock Text="entreprises" Foreground="FloralWhite" />
+                    </StackPanel>
+
+
+                </StackPanel>
+
+            </StackPanel>
+
+        </Border>
+
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center">
+            <TextBlock Text="Connexion" FontSize="20" />
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Étudiant" Margin="0,0,10,0" />
+                <TextBlock Text="Entreprise" />
+                <TextBlock Text="Coordonateur" />
+            </StackPanel>
+
+        </StackPanel>
+
+
+    </Grid>
+</Window>
