@@ -4,9 +4,49 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GestiCoop"
+        xmlns:views="clr-namespace:GestiCoop.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="GestiCoop — Gestion des stages coopératifs"
+        Height="800" Width="1280" MinHeight="650" MinWidth="1000"
+        WindowStartupLocation="CenterScreen">
 
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        
+        <Grid Grid.Column="0" Background="#4A5D8F">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Margin="20,24,20,20">
+                <TextBlock Text="GestiCoop" Foreground="White" FontSize="18" FontWeight="Bold"/>
+                <TextBlock Text="Stages coopératifs" Foreground="#C9D3EC" FontSize="11"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1">
+                <TextBlock Text="PRINCIPAL" Foreground="#AEBBDD" FontSize="10" FontWeight="SemiBold" Margin="20,0,0,8"/>
+                <TextBlock Text="Tableau de bord" Foreground="White" FontSize="13" Margin="20,8"/>
+                <Border Background="#33FFFFFF" CornerRadius="6" Margin="10,2" Padding="10,8">
+                    <TextBlock Text="Offres de stage" Foreground="White" FontSize="13" FontWeight="SemiBold"/>
+                </Border>
+                <TextBlock Text="Étudiants" Foreground="White" FontSize="13" Margin="20,8"/>
+                <TextBlock Text="Candidatures" Foreground="White" FontSize="13" Margin="20,8"/>
+                <TextBlock Text="Entreprises" Foreground="White" FontSize="13" Margin="20,8"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Margin="20,0,20,20">
+                <TextBlock Text="K. Aladji" Foreground="White" FontWeight="SemiBold" FontSize="12"/>
+                <TextBlock Text="Coordonnateur" Foreground="#C9D3EC" FontSize="11"/>
+            </StackPanel>
+        </Grid>
+
+       
+        <views:OffresStageView Grid.Column="1"/>
     </Grid>
 </Window>
